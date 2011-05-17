@@ -13,7 +13,7 @@ meta-spec:
   version: 1.4
 name: Data-Validate-VIN
 provides:
-  Validate::VIN:
+  Data::Validate::VIN:
     file: lib/Data/Validate/VIN.pm
     version: 0.02
 requires:

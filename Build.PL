@@ -7,7 +7,7 @@ my $builder = Module::Build->new(
     module_name         => 'Data::Validate::VIN',
     license             => 'perl',
     dist_author         => q{collin seaton <cseaton@cpan.org>},
-    dist_version_from   => 'lib/Validate/VIN.pm',
+    dist_version_from   => 'lib/Data/Validate/VIN.pm',
     build_requires => {
         'Test::More' => 0,
     },
