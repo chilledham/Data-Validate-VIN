@@ -15,9 +15,9 @@ name: Data-Validate-VIN
 provides:
   Data::Validate::VIN:
     file: lib/Data/Validate/VIN.pm
-    version: 0.02
+    version: 0.03
 requires:
   perl: 5.008
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.02
+version: 0.03

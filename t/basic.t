@@ -6,7 +6,6 @@ use Test::More tests => 54;
 
 
 BEGIN {
-    use lib '/home/collin/private/git/Data-Validate-VIN/lib';
     use_ok('Data::Validate::VIN');
 }
 
@@ -145,7 +144,7 @@ for (@$bad10therrs) {
 
 # check for both undef and empty string passed
 for ('',undef) {
-    my $empty = new_ok('Data::Validate::VIN');
+    my $empty = new_ok('Data::Validate::VIN' => [$_]);
     my $emptyerrs = $empty->errors();
     is( scalar(@$emptyerrs),1,'errors() check - invalid VIN: ' . "@$emptyerrs" );
     like($emptyerrs->[0],qr/No VIN supplied/,'Expected error - invalid VIN: ' . $emptyerrs->[0]);
