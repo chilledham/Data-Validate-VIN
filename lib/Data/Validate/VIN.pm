@@ -3,7 +3,7 @@ package Data::Validate::VIN;
 use 5.008;
 use strict;
 use warnings;
-use Carp;
+#use Carp;
 
 our $VERSION = '0.03';
 
