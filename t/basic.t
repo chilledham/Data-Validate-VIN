@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 54;
+use Test::More;
 
 
 BEGIN {
@@ -150,7 +150,13 @@ for ('',undef) {
     like($emptyerrs->[0],qr/No VIN supplied/,'Expected error - invalid VIN: ' . $emptyerrs->[0]);
 }
 
-#done_testing();
+for ('$', '#', '123', '^&') {
+    my $verybad2 = new_ok('Data::Validate::VIN' => [$_]);
+    my $verybaderrs2 = $verybad2->errors();
+    ok scalar(@$verybaderrs2), "Invalid: $_";
+}
+
+done_testing();
 
 sub badGets {
     my($obj,$_vin) = @_;

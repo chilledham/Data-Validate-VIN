@@ -133,23 +133,21 @@ sub _checkCharacters {
 
     # wanted unwanted toCheck section
 
-    my $checked = $args{toCheck};
-    $checked =~ tr/[a-z]/[A-Z]/;
+    my $checked = uc($args{toCheck});
+    my @checked = split(q{}, $checked); ## char array
+    my @illegal;
 
-    if ( $checked !~ /^$args{wanted}+$/ ) {
-        my $tmp = $checked;
-
-        my $badChars;
-
-        until ( $tmp =~ /^$args{wanted}+$/ or $tmp =~ /^$/ ) {
-            my ($bad) = $tmp =~ /($args{unwanted})/;
-            $tmp =~ s/($args{unwanted})//;
-
-            $badChars .= $bad;
+    for (my $i = 0; $i < @checked; $i++) {
+        unless ($checked[$i] =~ /^$args{wanted}+$/) {
+            push @illegal, $checked[$i];
         }
-        my $err = "Illegal characters in " . $args{section} . ": $badChars";
+    }
+
+    if (@illegal) {
+        my $err = "Illegal characters in " . $args{section} . ': ' . join(q{}, @illegal);
         $self->_trackError($err);
     }
+
     return $checked;
 }
 
