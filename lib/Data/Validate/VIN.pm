@@ -5,7 +5,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub new {
     my ( $class, $vin ) = @_;
@@ -465,7 +465,7 @@ North American Vehicle Identification Numbers from 1980 and later
 
 =head1 VERSION
 
-0.03
+0.04
 
 =head1 SYNOPSIS
 
@@ -569,8 +569,10 @@ collin seaton, C<< <cseaton at cpan.org> >>
 =head1 BUGS
 
 Please report any bugs or feature requests to C<bug-data-validate-vin at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Data-Validate-VIN>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Data-Validate-VIN>.
+I will be notified, and then you'll automatically be notified of progress on your bug as I make changes.
+
+Fork me on Github: L<https://github.com/chilledham/Data-Validate-VIN>
 
 =head1 SUPPORT
 
@@ -600,6 +602,12 @@ L<http://cpanratings.perl.org/d/Data-Validate-VIN>
 L<http://search.cpan.org/dist/Data-Validate-VIN/>
 
 =back
+
+=head1 THANKS
+
+Thanks to the following contributors:
+
+moltar
 
 =head1 WARRANTY
 
