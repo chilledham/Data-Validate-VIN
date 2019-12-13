@@ -5,7 +5,7 @@ use strict;
 use warnings;
 #use Carp;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub new {
     my ( $class, $vin ) = @_;
@@ -465,7 +465,7 @@ North American Vehicle Identification Numbers (model years 1980 - 2039)
 
 =head1 VERSION
 
-0.04
+0.05
 
 =head1 SYNOPSIS
 

@@ -1,23 +1,25 @@
 ---
-abstract: "Perl extension for basic validation of\nNorth American Vehicle Identification Numbers from 1980 and later"
+abstract: 'Perl extension for basic validation of'
 author:
   - 'collin seaton <cseaton@cpan.org>'
 build_requires:
-  Test::More: 0
+  Test::More: '0'
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3603'
+  Module::Build: '0.42'
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4229, CPAN::Meta::Converter version 2.150010'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Data-Validate-VIN
 provides:
   Data::Validate::VIN:
     file: lib/Data/Validate/VIN.pm
-    version: 0.04
+    version: '0.05'
 requires:
-  perl: 5.008
+  perl: '5.008'
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.04
+version: '0.05'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
